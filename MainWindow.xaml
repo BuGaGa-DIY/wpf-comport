@@ -1,0 +1,44 @@
+﻿<Window x:Class="ComPort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComPort"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="244" Width="332">
+    <Grid Margin="0,0,0,2">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFECFF33" Offset="0.829"/>
+                <GradientStop Color="#FFB72CE0"/>
+                <GradientStop Color="#FF58FF33"/>
+                <GradientStop Color="#FFF01F1F"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="ConnectingBT" Content="Connect" HorizontalAlignment="Left" Margin="230,10,0,0" VerticalAlignment="Top" Width="75" Height="35" FontFamily="Segoe Print" FontSize="14" FontWeight="Bold" Foreground="#FF27CF27" BorderBrush="White" Click="ConnectingBT_Click">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#00000000"/>
+                    <GradientStop Color="#3FE6CA1D" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="comList" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.6,0" Height="35" FontFamily="Segoe Print" FontSize="14" FontWeight="Bold" BorderBrush="#00ACACAC" Foreground="#FF27CF27">
+            <ComboBox.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA01E1E" Offset="0"/>
+                    <GradientStop Color="#FFDA1C1C" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.OpacityMask>
+            <ComboBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#00F0F0F0" Offset="0"/>
+                    <GradientStop Color="#3FFD8725" Offset="1"/>
+                </RadialGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label x:Name="comLabel" Content="Choose ComPort:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14" FontWeight="Bold" Foreground="#FF14F909"/>
+
+    </Grid>
+</Window>
